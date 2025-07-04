@@ -48,20 +48,34 @@
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
         
         .artwork:hover {
             transform: translateY(-5px);
         }
         
-        .artwork-img {
+        .artwork-img-container {
             width: 100%;
-            height: 300px;
-            object-fit: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f0f0;
+            padding: 1rem;
+        }
+        
+        .artwork-img {
+            max-width: 100%;
+            max-height: 300px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
         }
         
         .artwork-info {
             padding: 1rem;
+            flex-grow: 1;
         }
         
         .artwork-title {
@@ -100,7 +114,9 @@
         
         <div class="artworks">
             <div class="artwork">
-                <img src="https://i.postimg.cc/4m2SW5dB/image.jpg" alt="Картина 1" class="artwork-img">
+                <div class="artwork-img-container">
+                    <img src="https://i.postimg.cc/4m2SW5dB/image.jpg" alt="Загадочный пейзаж" class="artwork-img">
+                </div>
                 <div class="artwork-info">
                     <h3 class="artwork-title">Загадочный пейзаж</h3>
                     <p class="artwork-author">Автор: Неизвестен</p>
@@ -109,7 +125,9 @@
             </div>
             
             <div class="artwork">
-                <img src="https://i.postimg.cc/8z7W7ZxT/art2.jpg" alt="Картина 2" class="artwork-img">
+                <div class="artwork-img-container">
+                    <img src="https://i.postimg.cc/8z7W7ZxT/art2.jpg" alt="Городские огни" class="artwork-img">
+                </div>
                 <div class="artwork-info">
                     <h3 class="artwork-title">Городские огни</h3>
                     <p class="artwork-author">Автор: Мария Иванова</p>
@@ -118,7 +136,9 @@
             </div>
             
             <div class="artwork">
-                <img src="https://i.postimg.cc/J4Y7k1XH/art3.jpg" alt="Картина 3" class="artwork-img">
+                <div class="artwork-img-container">
+                    <img src="https://i.postimg.cc/J4Y7k1XH/art3.jpg" alt="Морской бриз" class="artwork-img">
+                </div>
                 <div class="artwork-info">
                     <h3 class="artwork-title">Морской бриз</h3>
                     <p class="artwork-author">Автор: Алексей Петров</p>
